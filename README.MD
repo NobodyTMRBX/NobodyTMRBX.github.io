@@ -6,4 +6,4 @@ Owen Walters
 Tejada, Arturo
 
 
-A landry status website
+A laundry status website
