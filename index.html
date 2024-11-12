@@ -1,11 +1,11 @@
+<!-- Code is uploaded and modified from freefrontend.com, Author: Alex, Uploaded: February 4, 2015 -->
+<!-- https://codepen.io/alexanderkwright/pen/ZYXPav -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- Code is uploaded and modified from freefrontend.com, Author: Alex, Uploaded: February 4, 2015 -->
-    <!-- https://codepen.io/alexanderkwright/pen/ZYXPav -->
     <style>
       * {
         -webkit-font-smoothing: antialiased;
@@ -29,14 +29,8 @@
         font-family: "Roboto", helvetica, arial, sans-serif;
         font-size: 1.5em;
       }
-      body:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0.3;
+      h1 {
+        color: #ffffff;
       }
       .login-form {
         width: 100%;
@@ -100,12 +94,15 @@
         transition: transform 0.15s ease;
         transform: scale(1.1);
       }
-      .lf--forgot {
-        margin-top: 1em;
-        color: #f76902;
-        font-size: 0.65em;
+      .additional-options {
         text-align: center;
         position: relative;
+      }
+      .reg-or-forgot {
+        margin-top: 1em;
+        color: #ffffff;
+        font-size: 0.65em;
+        vertical-align: middle;
       }
       ::placeholder {
         color: #8f8f8f;
@@ -113,7 +110,8 @@
     </style>
   </head>
   <body>
-    <form class="login-form">
+    <h1>RIT Laundry Room Tracker</h1>
+    <form class="login-form" action="blank.html">
       <div class="flex-row">
         <label class="lf--label" for="username">
           <svg x="0px" y="0px" width="12px" height="13px">
@@ -148,8 +146,13 @@
           type="password"
         />
       </div>
-      <input class="lf--submit" type="submit" value="LOGIN" />
+      <form action="blank.html" method="POST">
+        <input class="lf--submit" type="submit" value="LOGIN" />
+      </form>
     </form>
-    <a class="lf--forgot" href="#">Forgot password?</a>
+    <div class="additional-options">
+      <a class="reg-or-forgot" href="new-user.html">Register</a>
+      <a class="reg-or-forgot" href="forgot-password.html">Forgot password</a>
+    </div>
   </body>
 </html>
