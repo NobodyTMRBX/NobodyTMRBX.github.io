@@ -13,6 +13,15 @@
       .statusblocked::before {
         content: "⛔";
       }
+      .reportresolved::before {
+        content: "✅";
+      }
+      .reportunresolved::before {
+        content: "⚠️";
+      }
+      .reportconfirmed::before {
+        content: "⛔";
+      }
     </style>
   </head>
   <body>
@@ -21,13 +30,28 @@
       <p>gleason laundry room</p>
     </header>
     <section>
-      <h2>status:</h2>
+      <h2>status</h2>
       <dl>
         <dt id="brokenstatus" class="statuswarn">1 pending broken report</dt>
-        <dd><a>report washer as broken</a></dd>
-        <dt id="claimstatus" class="statusready">Unclaimed since 2:17pm</dt>
-        <dd><a>report late</a></dd> 
+        <dd><a href="broken washer form UNFINISHED">report broken</a></dd>
+        <dt id="claimstatus" class="statusready">Unclaimed since <time>2:17pm</time></dt>
+        <dd><a href="broken washer form UNFINISHED">report late</a></dd> 
       </dl>
+      <a href="claim washer form??" id="claimlink" class="statuswarn">Claim washer</a>
+    </section>
+    <section>
+      <h2>report history</h2>
+      <ul>
+        <li class="reportunresolved">
+          <time>nov 21 @ 11:34am</time>: moldy
+        </li>
+        <li class="reportresolved">
+          <time>nov 20 @ 10:15am</time>: broken door
+        </li>
+      </ul>
+      <footer>
+        last maintenance: <time>nov 19 @ 5:55pm</time>
+      </footer>
     </section>
   </body>
 </html>
