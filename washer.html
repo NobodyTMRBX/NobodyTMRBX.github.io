@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>washer</title>
+    <style>
+      .statusready::before {
+        content: "✅";
+      }
+      .statuswarn::before {
+        content: "⚠️";
+      }
+      .statusblocked::before {
+        content: "⛔";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>WASHER 17</h1>
+      <p>gleason laundry room</p>
+    </header>
+    <section>
+      <h2>status:</h2>
+      <dl>
+        <dt id="brokenstatus" class="statuswarn">1 pending broken report</dt>
+        <dd><a>report washer as broken</a></dd>
+        <dt id="claimstatus" class="statusready">Unclaimed since 2:17pm</dt>
+        <dd><a>report late</a></dd> 
+      </dl>
+    </section>
+  </body>
+</html>
