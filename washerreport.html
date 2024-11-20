@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>report washer</title>
+    <style>
+      body {
+        max-width: 25em;
+        min-height: 80vh;
+        padding: 1em;
+        margin: auto; 
+        border: 2px solid black;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        font-size: xx-large;
+        text-align: center;
+      }
+      form {
+        line-height: 1.6em;
+        font-size: large;
+      }
+      #submit-button {
+        font-size: x-large;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>WASHER 17</h1>
+      <address>gleason laundry room</address>
+    </header>
+    <section>
+      <h2>report a machine</h2>
+      <form>
+        <label for="flocation">location</label><br>
+        <input id="flocation" name="location" type="text" value="gleason laundry room"><br>
+        <label for="fnumber">machine number</label><br>
+        <input id="fnumber" name="number" type="number" value="17"><br>
+        <label for="ftype">machine type</label><br>
+        <select id="ftype" name="type">
+          <option value="washer">Washer</option>
+          <option value="dryer">Dryer</option>
+        </select><br>
+
+        <label for="fissue">issue</label><br>
+        <select id="fissue" name="issue">
+          <option value="misc">other issue</option>
+          <option value="mold">moldy</option>
+          <option value="door">broken door</option>
+          <option value="heat">not heating</option>
+          <option value="power">wont power on</option>
+        </select><br>
+
+        <input id="submit-button" type="submit" value="Submit">
+      </form>
+    </section>
+  </body>
+</html>
