@@ -59,7 +59,13 @@
     #logo-location {
         display: inline-block;
         position: fixed;
-        bottom: 93.46vh;
+        bottom: 3.3vh;
+        right: 85.24vw;
+    }
+    #name-location {
+        display: inline-block;
+        position: fixed;
+        bottom: 91.46vh;
         right: 85.24vw;
     }
     .buttons {
@@ -146,6 +152,16 @@
 
         overflow-x: hidden;
     }
+    .header select {
+        width: 35.1vw;
+        padding: .75vw;
+        border: 1px solid #caced1;
+        border-radius: 0.5rem;
+        color: #ffffff;
+        background-color: #BF4408;
+        margin-top: 3vh;
+        font-size: 1vw;
+    }
 
 </style>
 
@@ -156,8 +172,18 @@
     <title>background template</title>
     <meta charset="utf-8" />
     <div class="header">
-        <h1 style="color:rgb(0, 0, 0)">RIT Laundry Room Tracker</h1>
-        <img src="images/RITLOGO.jpg" alt="ritlogo" class="logo-image" id = "logo-location"/>
+        <select name="laundrySelect" id = "select">
+            <option value="gleason">Gleason Laundry Room</option>
+            <option value="sol">Huemann Laundry Room</option>
+            <option value="elling">Ellingson Laundry Room</option>
+            <optgroup label="Residence Hall Laundry Room">
+                <option>Hall A Laundry Room</option>
+                <option>Hall B Laundry Room</option>
+                <option>Hall C Laundry Room</option>
+                <option>Hall D Laundry Room</option>
+            </optgroup>
+        </select>
+        <div style="color:rgb(0, 0, 0); font-weight: bold" id="name-location">RIT Laundry Room Tracker</h1>
         <div class="buttons button1 sidebutton2 selectedcolor">
             <div class="view-button">
                 <div class="header-text1" href="blank.html" onclick="location.href='index.html';return false;">
@@ -179,7 +205,7 @@
   </body>
   <footer>
     <div class="footer">
-        
+        <img src="images/RITLOGO.jpg" alt="ritlogo" class="logo-image" id = "logo-location"/>
     </div>
   </footer>
 </html>
