@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<!-- Classes : ) for everyone here -->
+<style>
+    * {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    @font-face { font-family: Inter; src: url("fonts/Inter.ttf"); } 
+      h1 {
+         font-family: Inter
+      }
+    html,
+    body {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        position: relative;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 191, 15, 0.9),
+            rgba(242, 95, 37, 0.9)
+        );
+        font-family: "Inter";
+        font-size: 1.5em;
+        overflow-x:hidden
+    }
+    h1 {
+        color: #ffffff;
+    }
+    .header {
+        display: inline-block;
+        padding-left: 5.1vh;
+        padding-right: 2.5vw;
+        padding-bottom: .1vh;
+        width: 100%;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        font-size: 0.79vw;
+        height: 10.79vh;
+        line-height: 5.93vh;
+    }
+    .logo-image {
+        display: inline-block;
+        width: 12.25vw;
+        object-fit: cover;
+    }
+    #logo-location {
+        display: inline-block;
+        position: fixed;
+        bottom: 3.3vh;
+        right: 85.24vw;
+    }
+    #name-location {
+        display: inline-block;
+        position: fixed;
+        bottom: 91.46vh;
+        right: 85.24vw;
+    }
+    #graph-location {
+        display: inline-block;
+        position: fixed;
+        bottom: 7.3vh;
+        right: 32.5vw;
+    }
+    .buttons {
+        display: inline-block;
+        border: none;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.85vw;
+        margin: 5px 2px;
+        text-align: center;
+    }
+    .button1 {border-radius: 12.25vw; width: 6.39vw;height: .5vh;   text-align: center;}
+    .sidebutton{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 91vh;
+        right: 2.66vw;
+    }
+
+    .sidebutton2{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 91vh;
+        right: 13.32vw;
+        
+    }
+    .graphbutton{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 70vh;
+        right: 29.66vw;
+        
+    }
+    .graphbutton2{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 70vh;
+        right: 40.32vw;
+        
+    }
+    .graphbutton3{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 70vh;
+        right: 50.98vw;
+        
+    }
+    .graphbutton4{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 70vh;
+        right: 61.64vw;
+        
+    }
+
+    .view-button {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .selectedcolor {
+        border-style: solid;
+        border-width: 2px;
+        border-color: #BF4408;
+        background-color: #BF4408;
+    }
+    .deselectedcolor {
+        border-style: solid;
+        background-color: #FBF1EB;
+        border-width: 2px;
+        border-color: #BF4408;
+    
+    }
+    .header-text1 {
+        position: relative;
+        text-align: center;
+        font-family: Inter;
+        font-weight: bold;
+        font-size: .559em;
+        bottom: 4.04vh;
+        left: .3vw;
+        text-align: center;
+        cursor: pointer;
+        overflow-x: hidden;
+    }
+    .header-text2 {
+        position: relative;
+        text-align: center;
+        font-family: Inter;
+        font-weight: bold;
+        font-size: .559em;
+        bottom: 4.04vh;
+        left: 0vw;
+        text-align: center;
+        cursor: pointer;
+        overflow-x: hidden;
+    }
+    .footer {
+        display: inline-block;
+        text-align: center;
+        background-color: #FBF1EB;
+        color: white;
+        position: fixed;
+        margin-top: 2%;
+        height: 50x;
+        width: 100%;
+        font-size: 0.8em;
+        bottom: 0;
+        right: 1px;
+        height: 9.7vh;
+
+        overflow-x: hidden;
+    }
+    .header select {
+        width: 35.1vw;
+        padding: .75vw;
+        border: 1px solid #caced1;
+        border-radius: 0.5rem;
+        color: #ffffff;
+        background-color: #BF4408;
+        margin-top: 3vh;
+        font-size: 1vw;
+    }
+
+    .graph-image {
+        display: inline-block;
+        width: 35.1vw;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 5vh;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+</style>
+
+<!-- Classes : ) for everyone here -->
+
+<html lang="en">
+  <head>
+    <title>background template</title>
+    <meta charset="utf-8" />
+    <div class="header">
+        <select name="laundrySelect" id = "select">
+            <option value="gleason">Gleason Laundry Room</option>
+            <option value="sol">Huemann Laundry Room</option>
+            <option value="elling">Ellingson Laundry Room</option>
+            <optgroup label="Residence Hall Laundry Room">
+                <option>Hall A Laundry Room</option>
+                <option>Hall B Laundry Room</option>
+                <option>Hall C Laundry Room</option>
+                <option>Hall D Laundry Room</option>
+            </optgroup>
+        </select>
+        <div style="color:rgb(0, 0, 0); font-weight: bold" id="name-location">RIT Laundry Room Tracker</h1>
+        <div class="buttons button1 sidebutton2 selectedcolor">
+            <div class="view-button">
+                <div class="header-text1" href="blank.html" onclick="location.href='index.html';return false;">
+                    <h1 style="color:rgb(255, 255, 255); font-weight: bold; font-family: Inter;"><strong>Simple View</strong></h1>
+                </div>
+            </div>
+        </div>
+        <div class="buttons button1 sidebutton deselectedcolor">
+            <div class="view-button">
+                <div class="header-text2" href="blank.html" onclick="location.href='index.html';return false;" >
+                    <h1 style="color:#BF4408; font-weight: bold; font-family: Inter;"><strong>Detailed View</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  </head>
+  <body>
+    <div class="buttons button1 graphbutton deselectedcolor">
+        <div class="view-button">
+            <div class="header-text1" onclick="selectedcolor">
+                <h1 style="color:#BF4408; font-weight: bold; font-family: Inter;"><strong>1 w</strong></h1>
+            </div>
+        </div>
+    </div>
+    <div class="buttons button1 graphbutton2 deselectedcolor">
+        <div class="view-button">
+            <div class="header-text1">
+                <h1 style="color:#BF4408; font-weight: bold; font-family: Inter;"><strong>24 hr</strong></h1>
+            </div>
+        </div>
+    </div>
+    <div class="buttons button1 graphbutton3 deselectedcolor">
+        <div class="view-button">
+            <div class="header-text1">
+                <h1 style="color:#BF4408; font-weight: bold; font-family: Inter;"><strong>12 hr</strong></h1>
+            </div>
+        </div>
+    </div>
+    <div class="buttons button1 graphbutton4 selectedcolor">
+        <div class="view-button">
+            <div class="header-text2">
+                <h1 style="color:rgb(255, 255, 255); font-weight: bold; font-family: Inter;"><strong>2 hr</strong></h1>
+            </div>
+        </div>
+    </div>
+    <img src="images/laundryGRAPH.png" alt="graph" class="graph-image" id = "graph-location"/>
+  </body>
+  <footer>
+    <div class="footer">
+        <img src="images/RITLOGO.jpg" alt="ritlogo" class="logo-image" id = "logo-location"/>
+    </div>
+  </footer>
+</html>
