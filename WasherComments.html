@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<!-- Classes : ) for everyone here -->
+<style>
+* {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    @font-face { font-family: Inter; src: url("fonts/Inter.ttf"); } 
+      h1 {
+         font-family: Inter
+      }
+    html,
+    body {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        position: relative;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 191, 15, 0.9),
+            rgba(242, 95, 37, 0.9)
+        );
+        font-family: "Inter";
+        font-size: 1.5em;
+        overflow-x:hidden
+    }
+    h1 {
+        color: #ffffff;
+    }
+    .header {
+        display: inline-block;
+        padding-left: 5.1vh;
+        padding-right: 2.5vw;
+        padding-bottom: .1vh;
+        width: 100%;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        font-size: 0.79vw;
+        height: 10.79vh;
+        line-height: 5.93vh;
+    }
+    .logo-image {
+        display: inline-block;
+        width: 12.25vw;
+        object-fit: cover;
+    }
+    #logo-location {
+        display: inline-block;
+        position: fixed;
+        bottom: 3.3vh;
+        right: 85.24vw;
+    }
+    #name-location {
+        display: inline-block;
+        position: fixed;
+        bottom: 91.46vh;
+        right: 85.24vw;
+    }
+    .buttons {
+        display: inline-block;
+        border: none;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.85vw;
+        margin: 5px 2px;
+        text-align: center;
+    }
+    .button1 {border-radius: 12.25vw; width: 6.39vw;height: .5vh;   text-align: center;}
+    .sidebutton{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 91vh;
+        right: 2.66vw;
+    }
+    .sidebutton2{ 
+        display: inline-block;
+        position: fixed;
+        bottom: 91vh;
+        right: 13.32vw;
+        
+    }
+    .view-button {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .selectedcolor {
+        border-style: solid;
+        border-width: 2px;
+        border-color: #BF4408;
+        background-color: #BF4408;
+    }
+    .deselectedcolor {
+        border-style: solid;
+        background-color: #FBF1EB;
+        border-width: 2px;
+        border-color: #BF4408;
+    
+    }
+    .header-text1 {
+        position: relative;
+        text-align: center;
+        font-family: Inter;
+        font-weight: bold;
+        font-size: .559em;
+        bottom: 4.04vh;
+        left: .3vw;
+        text-align: center;
+        cursor: pointer;
+        overflow-x: hidden;
+    }
+    .header-text2 {
+        position: relative;
+        text-align: center;
+        font-family: Inter;
+        font-weight: bold;
+        font-size: .559em;
+        bottom: 4.04vh;
+        left: 0vw;
+        text-align: center;
+        cursor: pointer;
+        overflow-x: hidden;
+    }
+    .footer {
+        display: inline-block;
+        text-align: center;
+        background-color: #FBF1EB;
+        color: white;
+        position: fixed;
+        margin-top: 2%;
+        height: 50x;
+        width: 100%;
+        font-size: 0.8em;
+        bottom: 0;
+        right: 1px;
+        height: 9.7vh;
+
+        overflow-x: hidden;
+    }
+    .header select {
+        width: 35.1vw;
+        padding: .75vw;
+        border: 1px solid #caced1;
+        border-radius: 0.5rem;
+        color: #ffffff;
+        background-color: #BF4408;
+        margin-top: 3vh;
+        font-size: 1vw;
+    }
+    .washer-text1 {
+        position: relative;
+        text-align: center;
+        font-family: Inter;
+        font-weight: bold;
+        font-size: 2em;
+        top: 9.95vh;
+        left: .95vw;
+        text-align: center;
+        cursor: pointer;
+        overflow-x: hidden;
+    }
+    .washer-image {
+        display: inline-block;
+        width: 12.25vw;
+        object-fit: cover;
+    }
+    #washer-location {
+        display: inline-block;
+        position: fixed;
+        top: 25vh;
+        right: 70%;
+    }
+    #form-location {
+        display: inline-block;
+        position: fixed;
+        top: 35vh;
+        right: 82vh;
+        font-size: 2em;
+    }
+    input[type="comment"],
+    input[type="title"]{
+        display: block;
+        margin-bottom: 20px;
+        padding: 10px 10px 10px 10px;
+        border-radius: 10px;
+        font-family: "Inter";
+        color: #BF4408;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<!-- Classes : ) for everyone here -->
+
+<html lang="en">
+    <head>
+        <title>background template</title>
+        <meta charset="utf-8" />
+        <div class="header">
+            <select name="laundrySelect" id = "select">
+                <option value="gleason">Gleason Laundry Room</option>
+                <option value="sol">Huemann Laundry Room</option>
+                <option value="elling">Ellingson Laundry Room</option>
+                <optgroup label="Residence Hall Laundry Room">
+                    <option>Hall A Laundry Room</option>
+                    <option>Hall B Laundry Room</option>
+                    <option>Hall C Laundry Room</option>
+                    <option>Hall D Laundry Room</option>
+                </optgroup>
+            </select>
+            <div style="color:rgb(0, 0, 0); font-weight: bold" id="name-location">RIT Laundry Room Tracker</h1>
+            <div class="buttons button1 sidebutton2 selectedcolor">
+                <div class="view-button">
+                    <div class="header-text1" href="blank.html" onclick="location.href='index.html';return false;">
+                        <h1 style="color:rgb(255, 255, 255); font-weight: bold; font-family: Inter;"><strong>Simple View</strong></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons button1 sidebutton deselectedcolor">
+                <div class="view-button">
+                    <div class="header-text2" href="blank.html" onclick="location.href='index.html';return false;" >
+                        <h1 style="color:#BF4408; font-weight: bold; font-family: Inter;"><strong>Detailed View</strong></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </head>
+  <body>
+    <img src="images/washing-machine.png" alt="washericon" class="washer-image" id = "washer-location"/>
+    <div>
+        <form id = "form-location">
+            <label for="title">Comment Subject:</label><br>
+            <input type="title" id="title" name="title"><br>
+            <label for="comment">Description</label><br>
+            <input type="comment" id="comment" name="comment">
+            <label for="submit">Post Comment</label><br>
+            <input type="submit" id="submit" name="submit" class="button1" value="Post Comment" style="min-height:3em; width:75%;">
+          </form>
+        <div class="washer-text1" >
+            <h1 style="color:#ffffff; font-weight: bold; font-family: Inter;"><strong>Washer # 15</strong></h1>
+        </div>
+    </div>
+  </body>
+  <footer>
+    <div class="footer">
+        <img src="images/RITLOGO.jpg" alt="ritlogo" class="logo-image" id = "logo-location"/>
+    </div>
+  </footer>
+</html>
