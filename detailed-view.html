@@ -76,11 +76,11 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 0.85vw;
+        font-size: 0.8vw;
         margin: 5px 2px;
-        text-align: center;
+        justify-content: center;
     }
-    .button1 {border-radius: 12.25vw; width: 6.39vw;height: .5vh;   text-align: center;}
+    .button1 {border-radius: 12.25vw; width: 6.39vw; height: .5vh;   text-align: center;}
     .sidebutton{ 
         display: inline-block;
         position: fixed;
@@ -93,6 +93,10 @@
         bottom: 91vh;
         right: 13.32vw;
         
+    }
+    .buttonSmall1{
+        border-radius: 12.25vw;
+        background-color: rgb(164, 164, 164);
     }
     .view-button {
         display: flex;
@@ -162,6 +166,47 @@
         margin-top: 3vh;
         font-size: 1vw;
     }
+    table {
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-align: center;
+        position: fixed;
+        width: 35.1vw;
+        height: auto;
+        right: 32.5vw;
+        bottom: 10vh;
+      }
+      
+      caption {
+        caption-side: bottom;
+        padding: 10px;
+        font-weight: bold;
+      }
+      
+      thead,
+      tfoot {
+        background-color: rgb(228 240 245);
+      }
+      
+      th,
+      td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+        background-color: rgb(130, 130, 130);
+        margin: 0px;
+      }
+      
+      tfoot th {
+        text-align: right;
+      }
+      
+      tfoot td {
+        font-weight: bold;
+      }
+      
 
 </style>
 
@@ -201,7 +246,49 @@
     </div>
   </head>
   <body>
-    
+    <table>
+        <caption>
+          Washers
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">User</th>
+            <th scope="col">Washer #</th>
+            <th scope="col">Time remaining</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>null</td>
+            <th scope="row"><button class="buttons buttonSmall1" onclick="location.href='washer.html'">1</button></th>
+            <td>0:00</td>
+          </tr>
+          <tr>
+            <td><img src="images/examplepfp_A.jpg" alt="profile photo" style="width: 3vw; border-radius: 2vh;"/></td>
+            <th scope="row"><button class="buttons buttonSmall1" onclick="location.href='washer.html'">2</button></th>
+            <td>10:24</td>
+          </tr>
+          <tr>
+            <td><img src="images/examplepfp_B.jpg" alt="profile photo" style="width: 3vw; border-radius: 2vh;"/></td>
+            <th scope="row"><button class="buttons buttonSmall1" onclick="location.href='washer.html'">3</button></th>
+            <td>04:15</td>
+          </tr>
+          <tr>
+            <td><img src="images/examplepfp_D.jpg" alt="profile photo" style="width: 3vw; border-radius: 2vh;"/></td>
+            <th scope="row"><button class="buttons buttonSmall1" onclick="location.href='washer.html'">4</button></th>
+            <td>55:45</td>
+          </tr>
+          <tr>
+            <td><img src="images/examplepfp_C.jpg" alt="profile photo" style="width: 3vw; border-radius: 2vh;"/></td>
+            <th scope="row"><button class="buttons buttonSmall1" onclick="location.href='washer.html'">5</button></th>
+            <td>00:32</td>
+          <tr>
+            <td>null</td>
+            <th scope="row"><button class="buttons buttonSmall1" onclick="location.href='washer.html'">6</button></th>
+            <td>0:00</td>
+          </tr>
+        </tbody>
+      </table>
   </body>
   <footer>
     <div class="footer">
