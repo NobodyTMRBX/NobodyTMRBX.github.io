@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laundry Status</title>
+    <style>
+      .ready::before {
+        content: "✅";
+      }
+      .warn::before {
+        content: "⚠️";
+      }
+      .blocked::before {
+        content: "⛔";
+      }
+      #claimlink {
+        font-size: xx-large;
+        text-align: center;
+      }
+      body {
+        max-width: 25em;
+        min-height: 80vh;
+        padding: 1em;
+        margin: auto; 
+        border: 2px solid black;
+      }
+      #statuslist {
+        font-size: larger;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        font-size: xx-large;
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+      }
+      #commentlist > dd {
+        margin-bottom: 0.5em;
+      }
+      mark {
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>WASHER 1</h1>
+      <address>gleason laundry room</address>
+    </header>
+    <section>
+      <h2>status</h2>
+      <dl id="statuslist">
+        <dt id="brokenstatus" class="warn">1 pending broken report</dt>
+        <dd><a href="washerreport.html">report broken</a></dd>
+        <dt id="claimstatus" class="ready">Unclaimed since <time>2:17pm</time></dt>
+        <dd><a href="userreport.html">report late</a></dd> 
+      </dl>
+      <a href="simple-view.html" id="claimlink" class="warn">Claim washer</a>
+    </section>
+    <section>
+      <h2>report history</h2>
+      <ul>
+        <li class="warn">
+          <time>nov 21 @ 11:34am</time>: moldy
+        </li>
+        <li class="ready">
+          <time>nov 20 @ 10:15am</time>: broken door
+        </li>
+      </ul>
+      <footer>
+        last maintenance: <time>nov 19 @ 5:55pm</time>
+      </footer>
+    </section>
+    <section>
+      <h2>other comments</h2>
+      <dl id="commentlist">
+        <dt><mark>mold</mark> <time>nov 21 @ 11:35am</time>: my clothes smell moldy now :&lpar;</dt>
+        <dd><a href="userreport.html">report comment</a></dd> 
+        <dt><mark>late</mark> <time>nov 20 @ 6:31pm</time>: someone's clothes have been in this machine for over an hour...</dt>
+        <dd><a href="userreport.html">report comment</a></dd> 
+        <dt><mark>fixed</mark> <time>nov 20 @ 10:25</time>: the door closes you have to hold it up level with the lock</dt>
+        <dd><a href="userreport.html">report comment</a></dd> 
+        <dt><mark>door stuck</mark> <time>nov 20 @ 10:13</time>: door wont close</dt>
+        <dd><a href="userreport.html">report comment</a></dd> 
+      </dl>
+      <footer>
+        <a href="WasherComments.html">write comment</a>
+      </footer>
+    </section>
+  </body>
+</html>
